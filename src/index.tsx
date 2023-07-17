@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom'
+import VideoBackground from './components/VideoBackgroung';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <VideoBackground />
+    <Router>
     <App />
+    </Router>
   </React.StrictMode>
 );
 
