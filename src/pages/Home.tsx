@@ -1,13 +1,12 @@
 import React from 'react';
 import { Typography, Button, Box, Grid } from '@mui/material';
 import { styled } from '@mui/system';
-import { Images } from '../components/Images';
 import { Portfolio } from '../components/Portfolio';
+import AboutPage from './AboutPage';
 
 const StyledMain = styled('main')({
   margin: 'auto',
-  boxShadow: '30px 0px 40px rgba(0,0,0,0.1), -30px 0px 40px rgba(0,0,0,0.2)',
-  background: '#eee',
+  background: '#fff',
   height: 'auto',
 
 });
@@ -16,7 +15,7 @@ const Landing = styled(Box)({
     flexWrap: 'nowrap',
     height: '100vh',
     width: '100vw',
-    background: '#eee',
+    background: '#fff',
     color: '#333',
     fontFamily: 'sans-serif',
     fontWeight: 100,
@@ -34,7 +33,7 @@ const LandingText = styled(Box)({
 });
 
 const LandingImage = styled(Box)({
-  background: `url(/artphoto.png) center/cover no-repeat`,
+  background: `url(/welcome.png) center/cover no-repeat`,
   height: '100vh',
   flex: '0 1 60vw',
   margin: 0,
@@ -143,6 +142,7 @@ const StyledFooter = styled('footer')({
   padding: '2rem 1rem',
   margin: 'auto',
   color: '#333',
+  backgroundColor: '#fff',
 });
 
 export const Home: React.FC = () => (
@@ -150,17 +150,17 @@ export const Home: React.FC = () => (
     <Landing>
       <LandingText>
         <div>
-          <Typography variant="h1">Acme Photography</Typography>
-          <Typography variant="h2">Beautiful Natural Photography</Typography>
-          <Button variant="outlined" href="#images" id="view-work">
-            View Work
+          <Typography variant="h1">Wellbeing×Computing</Typography>
+          <Typography variant="h4">Creating Digital Solutions for Better Wellbeing</Typography>
+          <Button variant="outlined" href="https://www.jn.sfc.keio.ac.jp/" id="view-work">
+            View My Laboratry
           </Button>
         </div>
       </LandingText>
       <LandingImage />
     </Landing>
-    <Portfoliotitle variant="h2">Portfolio</Portfoliotitle>
-    <PortfolioText variant="h4">Lorem ipsum dolor sit amet consectetur.</PortfolioText>
+    <Portfoliotitle variant="h2" id="section1">Portfolio</Portfoliotitle>
+    <PortfolioText variant="h4">Excellence in Action</PortfolioText>
     <Box   sx={{
       paddingTop: {
         xs: 0,
@@ -180,7 +180,8 @@ export const Home: React.FC = () => (
       md: 20, 
       lg: 25, 
     }
-  }}>
+  }}
+  color={'#fff'}>
     <Grid container spacing={2} justifyContent="center" alignItems="center">
     {portfolioItems.map((item, index) => (
       <Grid item xs={12} sm={6} md={6} lg={4} key={index}>
@@ -197,10 +198,32 @@ export const Home: React.FC = () => (
       ))}
       </Grid>
       </Box>
+      
+      <Portfoliotitle variant="h2" id="section2">ABOUT</Portfoliotitle>
+    <PortfolioText variant="h4">Get to Know Me</PortfolioText>
+  <AboutPage
+      selfPortraits={[
+        '/selfphoto1.jpg',
+        '/selfphoto2.jpg',
+      ]}
+      name={{
+        kanji: '影嶋亮太朗',
+        romaji: 'Ryotaro Kageshima',
+      }}
+      university={{
+        japanese: '慶應義塾大学院政策メディア研究科',
+        english: 'Keio University Graduate School of Media and Governance',
+      }}
+      organization="POSSE一期生" 
+      description={'大学院では「ウェルビーイングのためのコンピューティング」「ユビキタスコンピューティング」「デジタルウェルビーイング」に関して研究しています。プログラミングではこれまでHTML,CSS,Javascript,Typescript,React,PHP,Doker,SQL(MySQL)laravel,C++,C#,python,djangoなどを用いて活動してきました。過去にプログラミングのハッカソンの企画・運営をしたり、参加者として優勝した経験もあります。他にも3か月に及ぶチーム開発も経験しました。人格の勉強もしており、傾聴の大切さやインサイドアウトなど「7つの習慣」をベースに学習しています。ちなみに学部時代は「超伝導」に関する研究を行っており、C++をもちいたシミュレーションと平行して試料を作成し、ボルテックスラチェッド効果の測定を行っておりました。'}  
+      />
+     
+
+
+
+
+      
     <StyledFooter>
-
-
-
       <Typography variant="h3">Get In Touch</Typography>
       <Typography>Email or call us to set up a consult</Typography>
       <Typography>Email: <strong>contact@acmephotos.test</strong></Typography>

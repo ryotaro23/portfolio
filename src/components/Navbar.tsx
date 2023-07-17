@@ -20,26 +20,33 @@ const MenuButton = styled(Button)({
   '&:hover': {
     color: '#1ee2e7',
   },
+  fontsize: 20,
 });
 
 const Title = styled(Typography)({
   flexGrow: 1,
-  color: '#1ee2e7',
+  color: '#fff',
     fontWeight: 'bold',
     fontSize: 30,
     fontFamily: 'sans-serif',
     '@media (min-width:600px)': {
         fontSize: 30,
     },
+    '&:hover': {
+      color: '#1ee2e7',
+    },
 });
 
 const Subtitle = styled(Typography)({
     flexGrow: 1,
-    color: '#1ee2e7',
+    color: '#fff',
         fontSize: 20,
         fontFamily: 'sans-serif',
         '@media (min-width:600px)': {
             fontSize: 20,
+        },
+        '&:hover': {
+          color: '#1ee2e7',
         },
         paddingLeft: '10rem',
     });
@@ -50,20 +57,37 @@ export function Navbar() {
     <StyledAppBar position="fixed">
       <Toolbar>
         <Title variant="h6">
-            Komei Urushibata
-            <Subtitle>漆畑昂明</Subtitle> 
+            Ryotaro Kageshima
+            <Subtitle>影嶋亮太朗</Subtitle> 
         </Title>
         <Box display={{ xs: 'none', md: 'block' }}>
-
+        <ScrollLink 
+                    activeClass="active"
+                    to="section1"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
           <MenuButton color="inherit" href="#portfolio">
             Portfolio
           </MenuButton>
+          </ScrollLink>
           <MenuButton color="inherit" href="#services">
             Work
           </MenuButton>
+          <ScrollLink 
+                    activeClass="active"
+                    to="section2"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
           <MenuButton color="inherit" href="#about">
             About
           </MenuButton>
+          </ScrollLink>
           <MenuButton color="inherit" href="#contact">
             Contact
           </MenuButton>

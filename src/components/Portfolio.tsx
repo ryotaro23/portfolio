@@ -90,12 +90,6 @@ export const Portfolio: React.FC<PortfolioProps> = ({ title, description,imageUr
           image={hoverImageUrl}
           title={title}
         />
-        <CardContent>
-          <Typography className={classes.title} color="textSecondary" gutterBottom>
-            {title}
-          </Typography>
-
-        </CardContent>
       </Card>
 
    <Modal
