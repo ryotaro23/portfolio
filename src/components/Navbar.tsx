@@ -73,9 +73,6 @@ export function Navbar() {
             Portfolio
           </MenuButton>
           </ScrollLink>
-          <MenuButton color="inherit" href="#services">
-            Work
-          </MenuButton>
           <ScrollLink 
                     activeClass="active"
                     to="section2"
@@ -88,9 +85,30 @@ export function Navbar() {
             About
           </MenuButton>
           </ScrollLink>
+          <ScrollLink 
+                    activeClass="active"
+                    to="section3"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
+          <MenuButton color="inherit" href="#services">
+            Work
+          </MenuButton>
+          </ScrollLink>
+          <ScrollLink 
+                    activeClass="active"
+                    to="section4"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
           <MenuButton color="inherit" href="#contact">
             Contact
           </MenuButton>
+          </ScrollLink>
         </Box>
       </Toolbar>
     </StyledAppBar>

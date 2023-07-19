@@ -43,8 +43,6 @@ const AboutPage: React.FC<AboutPageProps> = ({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#000',
-        bgcolor: '#fff',
         height: '75vh',
       }}
     >

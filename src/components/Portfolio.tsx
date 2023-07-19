@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import { Card, CardContent, Typography, Modal, Box,CardMedia, } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
+import { textAlign } from '@mui/system';
 
 
 interface PortfolioProps {
@@ -147,11 +148,13 @@ export const Portfolio: React.FC<PortfolioProps> = ({ title, description,imageUr
           >
             ✖
           </Button>
-          <Typography id="modal-modal-title" variant="h2" component="h1">
+          <Typography id="modal-modal-title" variant="h3" >
             {title}
           </Typography>
-          <img src={imageUrl} alt={title} style={{ paddingTop:'5%',width: '100%', height: 'auto' }} />
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <img src={imageUrl} alt={title} style={{ paddingTop:'5%',width: '60%', height: '60%',paddingBottom:'5%'}} />
+          </div>
+          <Typography id="modal-modal-description" variant="h5"  >
             {description}
           </Typography>
         </Box>
