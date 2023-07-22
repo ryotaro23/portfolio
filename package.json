@@ -2,6 +2,7 @@
   "name": "postsite",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ryotaro23.github.io/ryotaro",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -25,8 +26,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "deploy": "npm run build && gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env PUBLIC_URL=/ryotaro react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -49,6 +51,9 @@
     ]
   },
   "devDependencies": {
-    "@types/react-scroll": "^1.8.7"
+    "@types/react-scroll": "^1.8.7",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^5.0.0"
   }
+  
 }

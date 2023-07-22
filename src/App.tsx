@@ -8,7 +8,7 @@ function App() {
   <React.Fragment>
       <Navbar />
     <Routes>
-        <Route path="" element={<Home />} />
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
       </Routes>
   </React.Fragment>
   );
