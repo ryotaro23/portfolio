@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Tooltip, IconButton, Typography } from '@mui/material';
+import { Box, Tooltip, IconButton, Typography, Grid } from '@mui/material';
 import { Email,LinkedIn, Twitter, GitHub,  Facebook,  } from '@mui/icons-material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
@@ -38,13 +38,18 @@ const SocialLink: React.FC<SocialLinkProps> = ({ title, url, IconComponent }) =>
 );
 
 const Contact: React.FC = () => (
-  <Box component="footer" sx={{ display: 'flex', justifyContent: 'center',alignItems:'center', gap: 2, padding: 2, height:'80vh' }}>
+
+  <Box component="footer" sx={{WebkitJustifyContent:'center', marginLeft:'auto',marginRight:'auto',width:'80%',marginTop:{xs:'100px',md:'300px'},marginBottom:{xs:'100px',md:'auto'}, height:'60vh' }}>
+  <Grid container spacing={2}>
+  <Grid item xs={12} sm={6} md={2} sx={{display:{xs:'block',md:'flex',}}}>
     <SocialLink title="Email" url="mailto:kageshima23@gmail.com" IconComponent={Email} />
     <SocialLink title="LinkedIn" url="https://www.linkedin.com/in/ryotaro-kagesima-7b015925a/" IconComponent={LinkedIn} />
     <SocialLink title="Instagram" url="https://www.instagram.com/ryotaro.23/" IconComponent={InstagramIcon} />
     <SocialLink title="Twitter" url="https://twitter.com/0O7R0g2gGQ3Ing2" IconComponent={Twitter} />
     <SocialLink title="GitHub" url="https://github.com/ryotaro23" IconComponent={GitHub} />
     <SocialLink title="Facebook" url="https://www.facebook.com/profile.php?id=100063786579535" IconComponent={Facebook} />
+    </Grid>
+    </Grid>
   </Box>
 );
 

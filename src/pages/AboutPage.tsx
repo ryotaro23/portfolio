@@ -36,14 +36,16 @@ const AboutPage: React.FC<AboutPageProps> = ({
   }, [selfPortraits.length]);
 
   return (
-    <Container
+    <Box
       sx={{
         width: '100%',
-        display: 'flex',
+        maxWidth: {xs:'350px',md:'1400px'},
+        display: {xs:'block', md:'flex',},
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '75vh',
+        height: {xs:'50vh',md:'75vh'},
+        margin: 'auto',
       }}
     >
       <Box
@@ -52,45 +54,45 @@ const AboutPage: React.FC<AboutPageProps> = ({
         alt="Self portrait"
         sx={{
           width: '60%',
-            height: '60%',
+          height: '80%',
           objectFit: 'cover',
-          margin: '3rem',
-          marginRight: 10,
+          margin: {xs:'3rem'},
+          marginRight:{xs:3, md:10,},
          
         }}
       />
       <Box
         sx={{
-          width: '60%',
+          width: {xs:'100%', md:'100%',},
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        <Typography variant="h2" gutterBottom>
+        <Typography variant="h2" gutterBottom sx={{fontSize:{xs:20,md:60}}}>
           {name.kanji} 
         </Typography>
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="h3" gutterBottom sx={{fontSize:{xs:20,md:50}}}>
           {name.romaji}
         </Typography>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom sx={{fontSize:{xs:20,md:40}}}>
           {university.japanese} 
         </Typography>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom sx={{fontSize:{xs:20,md:40}}}>
          サイバーインフォマティクス専攻
         </Typography>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h5" gutterBottom sx={{fontSize:{xs:10,md:25}}}>
           {university.english}
         </Typography>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h5" gutterBottom sx={{fontSize:{xs:10,md:30}}}>
           {organization}
         </Typography>
-        <Typography variant="body1">
+        <Typography variant="body1"sx={{width:'100%',fontSize:{xs:2,md:18}}}>
           {description}
         </Typography>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

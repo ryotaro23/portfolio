@@ -10,7 +10,7 @@ const StyledAppBar = styled(AppBar)({
     borderBottom: '1px solid #1ee2e7',
     padding: '1rem',
     '@media (min-width:600px)': {
-        padding: '1rem',
+        padding: '0rem',
     },
 });
 
@@ -54,11 +54,11 @@ const Subtitle = styled(Typography)({
 
 export function Navbar() {
   return (
-    <StyledAppBar position="fixed">
+    <StyledAppBar position="fixed" sx={{height:{xs:'50px',md:'120px'},padding:{xs:0,md:'1rem'}}}>
       <Toolbar>
-        <Title variant="h6">
+        <Title variant="h6" sx={{fontSize:{xs:'15px',md:'40px'}}}>
             Ryotaro Kageshima
-            <Subtitle>影嶋亮太朗</Subtitle> 
+            <Subtitle  sx={{display:{xs:'none',md:'block'}}}>影嶋亮太朗</Subtitle> 
         </Title>
         <Box display={{ xs: 'none', md: 'block' }}>
         <ScrollLink 

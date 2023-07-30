@@ -3,7 +3,7 @@ import React from 'react';
 function VideoBackground() {
   return (
     <div>
-      <video style={{ width: '100%', height: '100%' }} autoPlay loop muted>
+      <video style={{ width: '100%', height: '100%',marginTop:'5%'}} autoPlay loop muted>
         <source src="/ryotaro/STG_flash.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

@@ -23,35 +23,35 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   color='white'>
     <Box
     display="flex" 
-      component="img"
-      src={image}
-      alt="Timeline"
-      justifyContent="center"
-      sx={{
+    component="img"
+    src={image}
+    alt="Timeline"
+    justifyContent="center"
+    sx={{
         width: {
-            xs: 50,
+            xs: 80,
             sm: 80,
             md: 100,
             lg: 200,
           },
         height: {
-            xs: 50,
+            xs: 80,
             sm: 80,
             md: 100,
             lg: 200,
           },
-        borderRadius: '50%',
-        boxShadow: 24,
-        objectFit: 'cover',
+      borderRadius: '50%',
+      boxShadow: 24,
+      objectFit: 'cover',
       }}
     />
     <Box pl={2} pr={2} sx={{width:{
-            xs: 50,
+            xs: 250,
             sm: 300,
             md: 500,
             lg: 800,
     }}}>
-      <Typography variant="h4">{date}</Typography>
+      <Typography variant="h4" sx={{fontSize:{xs:10,md:20,}}}>{date}</Typography>
       <Typography variant="h5">{subheading}</Typography>
       <Typography>{text}</Typography>
     </Box>

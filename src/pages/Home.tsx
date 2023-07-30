@@ -1,5 +1,5 @@
 import { Typography, Button, Box, Grid } from '@mui/material';
-import { styled } from '@mui/system';
+import { fontSize, styled } from '@mui/system';
 import { Portfolio } from '../components/Portfolio';
 import AboutPage from './AboutPage';
 import Work from './Work';
@@ -63,13 +63,11 @@ const StyledMain = styled('main')({
 
 
 const Landing = styled(Box)({
-  display: 'flex',
   flexWrap: 'nowrap',
-  height: '100vh',
-  width: '100vw',
+  height: '100%',
+  width: '100%',
   color: '#333',
   fontFamily: 'sans-serif',
-  fontWeight: 100,
   });
   const LandingText = styled(Box)({
     display: 'flex',
@@ -264,17 +262,17 @@ const Landing = styled(Box)({
   return(
   <StyledMain>
 
-    <Landing id = "section0">
+    <Landing id = "section0"sx={{display:{xs:'block',md:'flex'}}}>
       <LandingText>
         <div>
-          <Typography variant="h1">Wellbeing×Computing</Typography>
-          <Typography variant="h4">Creating Digital Solutions for Better Wellbeing</Typography>
+          <Typography variant="h1" sx={{fontSize:{xs:30,md:100}}}>Wellbeing×Computing</Typography>
+          <Typography variant="h4" sx={{fontSize:{xs:15,md:30}}}>Creating Digital Solutions for Better Wellbeing</Typography>
           <Button variant="outlined" href="https://www.jn.sfc.keio.ac.jp/" id="view-work" sx={{margin:8} }>
             View My Laboratry
           </Button>
         </div>
       </LandingText>
-      <LandingImage />
+      <LandingImage sx={{display:{xs:'none',md:'block'}}}/>
     </Landing>
 
     <Portfolios>
@@ -335,12 +333,12 @@ const Landing = styled(Box)({
         english: 'Keio University Graduate School of Media and Governance',
       }}
       organization="POSSE一期生・BASS・カフェモダン" 
-      description={'大学院では「ウェルビーイングのためのコンピューティング」「ユビキタスコンピューティング」「デジタルウェルビーイング」に関して研究しています。プログラミングではこれまでHTML,CSS,Javascript,Typescript,React,PHP,Doker,SQL(MySQL)laravel,C++,C#,python,djangoなどを用いて活動してきました。過去にプログラミングのハッカソンの企画・運営をしたり、参加者として優勝した経験もあります。他にも3か月に及ぶチーム開発も経験しました。人格の勉強もしており、傾聴の大切さやインサイドアウトなど「7つの習慣」をベースに学習しています。ちなみに学部時代は「超伝導」に関する研究を行っており、C++をもちいたシミュレーションと平行して試料を作成し、ボルテックスラチェッド効果の測定を行っておりました。'}  
+      description={'大学院では「ウェルビーイングのためのコンピューティング」「ユビキタスコンピューティング」「デジタルウェルビーイング」に関して研究しています。プログラミングではこれまでHTML,CSS,Javascript,Typescript,React,PHP,Doker,SQL(MySQL),laravel, C++,C#,python,djangoなどを用いて活動してきました。過去にプログラミングのハッカソンの企画・運営をしたり、参加者として優勝した経験もあります。他にも3か月に及ぶチーム開発も経験しました。人格の勉強もしており、傾聴の大切さやインサイドアウトなど「7つの習慣」をベースに学習しています。ちなみに学部時代は「超伝導」に関する研究を行っており、C++をもちいたシミュレーションと平行して試料を作成し、ボルテックスラチェッド効果の測定を行っておりました。'}  
       />
 
 
-    <WorkTitle variant="h2" id="section3">Education And Work History</WorkTitle>
-    <WorkText variant="h4">Know My Journey</WorkText>
+    <WorkTitle variant="h2" id="section3"sx={{paddingTop:{xs: '90%',md: '5%'},fontSize:{xs:23,md:45,}}}>Education And Work History</WorkTitle>
+    <WorkText variant="h4"sx={{fontSize:{xs:18,md:35,}}}>Know My Journey</WorkText>
      <Work title={''} subtitle={''} timelineItems={[{
       image:'/ryotaro/jrhigh.jpg',
   date:'2012.4-2015.3',
