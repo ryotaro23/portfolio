@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Container } from '@mui/system';
+import { Box, } from '@mui/system';
 import { Typography } from '@mui/material';
 
 type AboutPageProps = {

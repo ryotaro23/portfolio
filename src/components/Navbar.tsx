@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { AppBar, Toolbar, Button, Typography, Box } from '@mui/material';
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink,} from "react-scroll";
 import { styled } from '@mui/system';
 
 const StyledAppBar = styled(AppBar)({

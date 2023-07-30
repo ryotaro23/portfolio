@@ -1,5 +1,5 @@
 import { Typography, Button, Box, Grid } from '@mui/material';
-import { fontSize, styled } from '@mui/system';
+import { styled } from '@mui/system';
 import { Portfolio } from '../components/Portfolio';
 import AboutPage from './AboutPage';
 import Work from './Work';
